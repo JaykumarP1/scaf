@@ -10,3 +10,13 @@ describe NewsController, type: :controller do
     end
   end
 end
+
+describe "POST create" do
+  context "with invalid attributes" do
+    it "should set errors" do
+      news_params = FactoryGirl.attributes_for(:news)
+      post :create, :news => news_params
+      puts assigns(:news).errors.inspect
+    end
+  end
+end
