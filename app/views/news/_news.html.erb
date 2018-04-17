@@ -1,6 +1,6 @@
 <tr>
     <td><%= news.s_no %></td>
-    <td><%= news.img %></td>
+    <td><%= image_tag news.image.url(:medium) %></td>
     <td><%= link_to news.title,news.url %></td>
     <td><%= link_to 'Show', news %></td>
     <td><%= link_to 'Edit', edit_news_path(news) %></td>
